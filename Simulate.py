@@ -184,12 +184,13 @@ class simulator():
         
         plt.show()
         
-    def run(self, rv_plot=False, error_plot=False):
+    def run(self, rv_plot=False, result_plot=True, error_plot=False):
         
         if rv_plot:
             self.plot_random_variable()
         self.simulate()
-        self.plot_result()
+        if result_plot:
+            self.plot_result()
         if error_plot:
             self.plot_error()
         self.plot_bingo_prob()
